@@ -1,0 +1,14 @@
+---
+# tasks file for netconf
+- name: NETCONF ENABLE BGP
+  netconf_config:
+    host: 10.0.249.251
+    port: 830
+    username: admin
+    password: cisco.123
+    look_for_keys: False
+    hostkey_verify: False
+    allow_agent: False
+    datastore: running
+    device_handler: nexus
+    src: /home/pod1user/Devel/ansible/playbooks/netconf/roles/netconf/files/enable_bgp.xml
